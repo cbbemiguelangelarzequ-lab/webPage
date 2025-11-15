@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-function App() {
-  const [count, setCount] = useState(0)
+import MenuBar from './components/MenuBar.jsx';
+import Footer from './components/Footer.jsx';
 
+import Inicio from './pages/Inicio.jsx';
+import Contenido from './pages/Contenido.jsx';
+import Servicios from './pages/Servicios.jsx';
+import Contactos from './pages/Contactos.jsx';
+import AcercaDe from './pages/AcercaDe.jsx';
+
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      {/* Header / Menú */}
+      <MenuBar />
 
-export default App
+      {/* Contenido principal */}
+      <main className="container mt-4">
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/contenido" element={<Contenido />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/contactos" element={<Contactos />} />
+          <Route path="/acerca" element={<AcercaDe />} />
+          {/* Ruta por defecto (404 simple) */}
+          <Route path="*" element={<h2>Página no encontrada</h2>} />
+        </Routes>
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </>
+  );
+};
+
+export default App;
