@@ -7,12 +7,12 @@ const MenuBar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
 
-        {/* Logo / Nombre */}
+
         <Link className="navbar-brand" to="/">
           Mi Web React
         </Link>
 
-        {/* Botón responsive */}
+
         <button
           className="navbar-toggler"
           type="button"
@@ -25,7 +25,7 @@ const MenuBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Links */}
+
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
 

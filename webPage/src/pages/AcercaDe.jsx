@@ -5,7 +5,7 @@ const AcercaDe = () => {
     <div>
       <h1>Acerca de</h1>
       <p>
-        Aquí puedes contar la historia de la empresa, misión, visión, valores, etc.
+        Aquí podemos contar la historia de la empresa, misión, visión, valores, y otros.
       </p>
     </div>
   );

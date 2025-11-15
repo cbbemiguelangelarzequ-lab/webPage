@@ -13,10 +13,10 @@ import AcercaDe from './pages/AcercaDe.jsx';
 const App = () => {
   return (
     <>
-      {/* Header / Menú */}
+
       <MenuBar />
 
-      {/* Contenido principal */}
+
       <main className="container mt-4">
         <Routes>
           <Route path="/" element={<Inicio />} />
@@ -24,12 +24,9 @@ const App = () => {
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/contactos" element={<Contactos />} />
           <Route path="/acerca" element={<AcercaDe />} />
-          {/* Ruta por defecto (404 simple) */}
           <Route path="*" element={<h2>Página no encontrada</h2>} />
         </Routes>
       </main>
-
-      {/* Footer */}
       <Footer />
     </>
   );

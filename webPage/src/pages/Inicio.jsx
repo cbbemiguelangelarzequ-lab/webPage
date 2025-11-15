@@ -1,12 +1,14 @@
 import React from 'react';
+import Carrousel from '../components/Carrousel.jsx';
 
 const Inicio = () => {
   return (
     <div>
-      <h1>Bienvenido a nuestra Página Web</h1>
+      <Carrousel />
+
+      <h1 className="mt-4">Bienvenido a nuestra Página Web</h1>
       <p>
-        Esta es la sección de <strong>Inicio</strong>. Aquí puedes mostrar una descripción
-        general de tu negocio o proyecto.
+        Esta es la sección de <strong>Inicio</strong>. aqui podremos mostrar lo que sea.
       </p>
     </div>
   );

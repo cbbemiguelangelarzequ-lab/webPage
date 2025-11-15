@@ -5,7 +5,7 @@ const Servicios = () => {
     <div>
       <h1>Servicios</h1>
       <p>
-        Aquí describes los servicios que ofreces a tus clientes.
+        Aquí podremos los servicios que ofreces a tus clientes.
       </p>
     </div>
   );
